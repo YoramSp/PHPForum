@@ -21,6 +21,7 @@
                 $user = $_POST['gebruikersnaam'];
                 $wachtwoord = md5($_POST['wachtwoord']);
                 $result = $database->execute("SELECT * FROM users WHERE username = '$user' AND password = '$wachtwoord'");
+
                 echo "<pre>";
                 print_r($result);
                 echo "</pre>";
